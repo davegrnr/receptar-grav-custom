@@ -1,0 +1,11 @@
+state: enabled
+email: davegrnr@gmail.com
+fullname: 'David Garner'
+title: Admin
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$ZT2C5A5OIGv8KRxlYui2CuIhg3DBv3riiwz06pdujrWg4gF74oxUe

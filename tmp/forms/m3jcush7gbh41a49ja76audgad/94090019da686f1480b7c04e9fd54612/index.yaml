@@ -1,0 +1,31 @@
+form: flex-pages
+unique_id: 94090019da686f1480b7c04e9fd54612
+url: '/pages/blog/t/tile2/:add'
+user:
+  username: admin
+  email: davegrnr@gmail.com
+timestamps:
+  created: 1631306724
+  updated: 1631306724
+data: null
+files: {  }
+object:
+  type: pages
+  key: blog/t/tile2
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META:
+      clone: true
+    storage_key: ''
+    parent_key: 01.blog/t
+    order: false
+    folder: tile2
+    template: item
+    lang: en
+    root: false
+    route: /blog/t
+    name: item
+    header:
+      title: tile2
+    frontmatter: "title: tile2\n"
