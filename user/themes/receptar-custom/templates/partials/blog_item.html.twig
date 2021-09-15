@@ -5,6 +5,56 @@
       {% if page.media.images|first %}
       {{ page.media.images|first.cropZoom(338,451).html('','', 'attachment-receptar-featured size-receptar-featured wp-post-image')|raw }}
       {% if page.header.text %}
+        <div class="image-text">
+          <span>
+            {{page.header.text}}
+          </span>
+        </div>
+        {% endif %}
+        {% else %}
+        <img class="attachment-receptar-featured size-receptar-featured wp-post-image" src="{{ theme_url }}/images/{{ site.global_featured_image }}">
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  {# +*+*+*+*+*+*+*+*+* #}
+
+{# <div id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry category-cakes tag-no-excerpt">
+  <div class="entry-media {% if truncate %}entry-{% if page.header.youtube or page.header.soundcloud or page.header.vimeo %}video{% else %}image{% endif %}{% else %} resp_video{% endif %}">
+{% for item in page.media.images|batch(2) %}
+    <div class="post-thumbnail">
+      {% if page.media.images|first %}
+      {{ page.media.images|first.cropZoom(338,451).html('','', 'attachment-receptar-featured size-receptar-featured wp-post-image')|raw }}
+      {% if page.header.text %}
+        <div class="image-text">
+          <span>
+            {{page.header.text}}
+          </span>
+        </div>
+        {% endif %}
+        {% else %}
+        <img class="attachment-receptar-featured size-receptar-featured wp-post-image" src="{{ theme_url }}/images/{{ site.global_featured_image }}">
+        {% endif %}
+
+      </div>
+        {% endfor %}
+    </div>
+  </div> #}
+
+
+
+
+{# +*+*+*+*+*+**+ #}
+
+  {# <div id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry category-cakes tag-no-excerpt">
+  <div class="entry-media {% if truncate %}entry-{% if page.header.youtube or page.header.soundcloud or page.header.vimeo %}video{% else %}image{% endif %}{% else %} resp_video{% endif %}">
+
+    <div class="post-thumbnail">
+      {% for item in page.media.images|batch(2) %}
+      {{ page.media.images|first.cropZoom(338,451).html('','', 'attachment-receptar-featured size-receptar-featured wp-post-image')|raw }}
+      {% if page.header.text %}
       <div class="image-text">
         <span>
           {{page.header.text}}
@@ -13,10 +63,11 @@
       {% endif %}
       {% else %}
       <img class="attachment-receptar-featured size-receptar-featured wp-post-image" src="{{ theme_url }}/images/{{ site.global_featured_image }}">
-      {% endif %}
+      {% endfor %}
 
     </div>
   </div>
+</div> #}
 
         {# <div class="entry-content">
 
@@ -252,4 +303,3 @@
       {% endif %}
     </div>
   </div> #}
-</div>
