@@ -1,10 +1,29 @@
 <div id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry category-cakes tag-no-excerpt">
-  <div class="entry-media {% if truncate %}entry-{% if page.header.youtube or page.header.soundcloud or page.header.vimeo %}video{% else %}image{% endif %}{% else %} resp_video{% endif %}">
-
     <div class="post-thumbnail">
-      {% if page.media.images|first %}
-      {{ page.media.images|first.cropZoom(338,451).html('','', 'attachment-receptar-featured size-receptar-featured wp-post-image')|raw }}
-      {% if page.header.text %}
+      <div>
+          {% for image in page.media.images %}
+              {{ image.html()|raw }}
+              {% if not loop.last and loop.index % 2 == 0 %}
+      </div>
+        <div>
+                {% endif %}
+            {% endfor %}
+        </div>
+  </div>
+</div>
+
+  {# +%+%+%+%+%+%+%+% #}
+{# <div id="post-{{ loop.index }}" class="post-{{ loop.index }} post type-post status-publish format-standard has-post-thumbnail hentry category-cakes tag-no-excerpt">
+    <div class="post-thumbnail">
+        <div>
+            {% for image in page.media.images %}
+                {{ image.html()|raw }}
+                {% if not loop.last and loop.index % 2 == 0 %}
+        </div>
+        <div>
+                {% endif %}
+            {% endfor %}
+        </div>
         <div class="image-text">
           <span>
             {{page.header.text}}
@@ -17,7 +36,7 @@
 
       </div>
     </div>
-  </div>
+  </div> #}
 
   {# +*+*+*+*+*+*+*+*+* #}
 

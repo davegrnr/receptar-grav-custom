@@ -1294,16 +1294,15 @@ blockquote.alignright {
 
 .posts {
 	margin: 0;
-	display: -ms-inline-grid;
 }
 
 .posts .hentry {
 	position: relative;
-	display: inline-block;
 	overflow: hidden;
 	margin: 1px;
 	vertical-align: top;
-}
+	display: inline-block !important;
+}	
 
 .posts .hentry:nth-child(4n + 1),
 .posts .hentry:nth-child(4n + 2) {
@@ -1317,13 +1316,6 @@ blockquote.alignright {
 	float: left;
 	clear: left;
 }
-/* .posts .hentry:nth-child(4n + 3){
-	float: right;
-}
-.posts .hentry:nth-child(4n + 4) {
-	float: right;
-	clear: both;
-} */
 .posts .hentry:nth-child(4n + 3),
 .posts .hentry:nth-child(4n + 4) {
 	height: 282px !important;
